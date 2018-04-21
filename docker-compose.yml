@@ -1,6 +1,6 @@
 version: '2'
 services:
-    sa_students_db:
+    students-db:
         image: mysql
         ports:
             - "3306:3306"
@@ -9,11 +9,11 @@ services:
             MYSQL_USER: user
             MYSQL_PASSWORD: arqui
             MYSQL_DATABASE: sa_students_ms_development
-            MYSQL_HOST: sa_students_db
-    sa_students_ms:
+            MYSQL_HOST: students-db
+    students-ms:
         build: .
         command: bash -c "sleep 40 && rm -f tmp/pids/server.pid && bundle exec rails db:migrate && bundle exec rails s -p 4000 -b '0.0.0.0'"
         ports:
             - "4000:4000"
         depends_on:
-            - sa_students_db
+            - students-db
