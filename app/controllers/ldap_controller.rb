@@ -20,7 +20,7 @@ class LdapController < ApplicationController
 
         if connect()
             ldap = NET::LDAP.new(
-                host: 'academy-ldap'
+                host: 'academy-ldap',
                 port: 389,
                 auth: {
                     methiod: :simple,
