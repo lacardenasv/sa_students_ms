@@ -1,7 +1,7 @@
 require 'net/ldap'
 class LdapController < ApplicationController
     def connect
-        ldap = NET::LDAP.new(
+        ldap = Net::LDAP.new(
             host: 'academy-ldap',
             port: 389,
             auth: {
@@ -19,7 +19,7 @@ class LdapController < ApplicationController
         email = email[/\A\w+/].downcase
 
         if connect()
-            ldap = NET::LDAP.new(
+            ldap = Net::LDAP.new(
                 host: 'academy-ldap',
                 port: 389,
                 auth: {
