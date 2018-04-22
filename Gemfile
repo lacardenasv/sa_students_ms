@@ -43,3 +43,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #Practice
 gem 'therubyracer', :platforms => :ruby
 gem 'execjs'
+
+#LDAP
+gem 'net-ldap'
