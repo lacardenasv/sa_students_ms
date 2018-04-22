@@ -6,7 +6,7 @@ services:
             - "3306:3306"
         environment:
             MYSQL_ROOT_PASSWORD: arqui
-            MYSQL_USER: user
+            MYSQL_USER: root
             MYSQL_PASSWORD: arqui
             MYSQL_DATABASE: sa_students_ms_development
             MYSQL_HOST: students-db
